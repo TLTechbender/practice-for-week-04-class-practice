@@ -16,23 +16,29 @@ static introducePeople(people){
     if(!Array.isArray(people)){
         console.log("introducePeople only takes an array as an argument");
     }
-  /*else if(!people instanceof Person){
+  for(let person of people){
+  if(!(person instanceof Person)){
         console.log("All items in array must be Person class instances");
-    } /*else{
-        return people.map(person=>person.introduce());
+  return;
+  }
     }
-}*/
 
+     people.map(person=>person.introduce());
+
+
+/*
 else if ( people.find(person => person instanceof Person === false) !== undefined) {
       console.log("All items in array must be Person class instances.")
     } else {
       return people.map(person => person.introduce());
     }
   }
-
+*/
 /* I can't exactly say why my own code is not working!!!!!
  * Guess I'll have to do much more studying and researching on javascript classes
 */
+/* Scratch that, I finally found a way to make my code work!!!!!!!*/
+}
 
 }
 
